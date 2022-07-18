@@ -1,0 +1,25 @@
+{
+  "name": "beers-bar",
+  "version": "1.0.0",
+  "description": "beers bar backend for nodejs and mongodb also runs the rest api requests from the reverse proxy",
+  "main": "javascript/app.js",
+  "scripts": {
+    "test": "nodemon javascript/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pentestr5044/Beers-Bar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pentestr5044/Beers-Bar/issues"
+  },
+  "homepage": "https://github.com/Pentestr5044/Beers-Bar#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.4"
+  }
+}
