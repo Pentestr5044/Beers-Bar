@@ -4,7 +4,8 @@
   "description": "beers bar backend for nodejs and mongodb also runs the rest api requests from the reverse proxy",
   "main": "javascript/app.js",
   "scripts": {
-    "test": "nodemon javascript/app.js"
+    "test": "nodemon rest-api/app.js",
+    "test2": "nodemon soap-api/api.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +19,12 @@
   "homepage": "https://github.com/Pentestr5044/Beers-Bar#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "create-react-app": "^5.0.1",
     "express": "^4.18.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.4.4"
+    "mongoose": "^6.4.4",
+    "react": "^18.2.0",
+    "react-router": "^6.3.0",
+    "soap": "^0.45.0"
   }
 }
