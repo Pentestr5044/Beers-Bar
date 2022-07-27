@@ -4,7 +4,7 @@
   "description": "beers bar backend for nodejs and mongodb also runs the rest api requests from the reverse proxy",
   "main": "javascript/app.js",
   "scripts": {
-    "test": "nodemon rest-api/app.js",
+    "test": "nodemon rest-api/server.js",
     "test2": "nodemon soap-api/api.js"
   },
   "repository": {
