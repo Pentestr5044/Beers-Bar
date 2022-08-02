@@ -21,7 +21,7 @@ root.render(
       <Route path="/premium" element={<Premium />} />
       <Route path="/my/profile" element={<UserProfile />} />
       <Route path="/mods" element={<Moderators />} />
-      <Route path="/admin/meeting" element={<MeetingTable />} />
+      <Route path="/admin/meeting" element={<MeetingTable />} />\
       <Route path="/logout" element={<Logout />} />
       <Route path="/chatrooms" element={<Chatrooms />} />
       <Route path="/buy-a-gift" element={<BuyABeer />} />
