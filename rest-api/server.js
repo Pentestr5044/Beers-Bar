@@ -1,8 +1,12 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const app = express();
+const port = 8888;
 
-const app = express()
-const port = 8888
 
+if (mongoose.connect('mongodb://localhost:27017/myapp')){
+  console.log("mongodb connected!");
+}
 
 
 
