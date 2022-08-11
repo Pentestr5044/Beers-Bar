@@ -21,6 +21,14 @@ const userSchema = new Schema ({
         type: String, 
         req: true
     },
+    isAdmin:{ 
+        type: String, 
+        req: true
+    },
+    isCreator:{ 
+        type: String, 
+        req: true
+    },
     lName:{ 
         type: String, 
         req: true
