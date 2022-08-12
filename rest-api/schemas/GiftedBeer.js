@@ -1,15 +1,15 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-const userSchema = new Schema({
+const giftSchema = new Schema({
   username: {
     type: String,
     req: true,
     unique: true,
   },
   email: {
-    type: String,
+    type: email,
     unique: true,
     req: true,
   },
@@ -19,26 +19,24 @@ const userSchema = new Schema({
   },
   fName: {
     type: String,
+    req: true,
   },
   lName: {
     type: String,
+    req: true,
   },
   isAdmin: {
-    type: Number,
+    type: String,
     req: true,
-    default: 4,
   },
   isCreator: {
-    type: Number,
+    type: String,
     req: true,
-    default: 0,
   },
   rDate: {
     type: Date,
     req: true,
     hidden: true,
-    default: Date.now,
   },
 });
-
-module.exports = mongoose.model("users", userSchema);
+module.exports = mongoose.model("gifts", giftSchema);

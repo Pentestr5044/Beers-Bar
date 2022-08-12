@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/Pentestr5044/Beers-Bar#readme",
   "dependencies": {
+    "body-parser": "^1.20.0",
     "cors": "^2.8.5",
     "create-react-app": "^5.0.1",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "express-router": "^0.0.1",
     "fast-xml-parser": "^4.0.9",
     "fs": "^0.0.1-security",
     "jsonwebtoken": "^8.5.1",
