@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
-const registerRoute = require('./routes/registerRoute');
+const userRoute = require('./routes/userRoute');
 const app = express();
 const port = 8888;
 var bodyParser = require("body-parser");
@@ -12,7 +12,7 @@ if (mongoose.connect(process.env.MONGO_URL)){
   console.log('MONGO DB CONNECTED!!!!!')
 };
 
-app.use('/register', registerRoute)
+app.use('/api', userRoute)
 
 app.listen(port, () =>{
     console.log("connected on port 8888.....running!")
