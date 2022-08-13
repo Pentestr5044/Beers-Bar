@@ -13,14 +13,15 @@ route.post("/register", (req, res) => {
     });
 });
 route.get("/login", (req, res)=>{
-  var username = req.body.username;
-  var password = req.body.password;
+  var username1 = req.body.username;
+  var password1 = req.body.password;
 //var jwt = req.body.jwt;
-  var searchUser = userModel(username, password);
-  searchUser.findOne({username:username,password:password},(err,user)=>{
+  userModel.findOne({username:req.body.username,password:req.body.password},(err,user)=>{
     if (user){
-      res.status(200).json(user);
-      res.redirect('../../frontend/beers-bar-frontend/src/pages/home.jsx')
+      res
+        .status(200)
+        .json(user)
+        .redirect("../../frontend/beers-bar-frontend/src/pages/home.jsx");
     }else{
       res.status(500);
       console.log(err);
