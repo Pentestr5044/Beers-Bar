@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
@@ -13,7 +13,7 @@ const cardSchema = new Schema({
     unique: true,
     req: true,
   },
-  password: {
+  ccNumber: {
     type: String,
     req: true,
   },
@@ -24,19 +24,6 @@ const cardSchema = new Schema({
   lName: {
     type: String,
     req: true,
-  },
-  isAdmin: {
-    type: String,
-    req: true,
-  },
-  isCreator: {
-    type: String,
-    req: true,
-  },
-  rDate: {
-    type: Date,
-    req: true,
-    hidden: true,
   },
 });
 module.exports = mongoose.model("cards", cardSchema);
