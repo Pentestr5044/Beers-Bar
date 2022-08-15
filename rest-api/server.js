@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const userRoute = require('./routes/userRoute');
 const profileRoute = require('./routes/profileRoute')
+const ccInfoRoute = require('./routes/creditCardRoute')
 const app = express();
 const port = 8888;
 var bodyParser = require("body-parser");
@@ -13,7 +14,7 @@ if (mongoose.connect(process.env.MONGO_URL)){
   console.log('MONGO DB CONNECTED!!!!!')
 };
 
-app.use('/api', userRoute, profileRoute)
+app.use('/api', userRoute, profileRoute, ccInfoRoute)
 
 app.listen(port, () =>{
     console.log("connected on port 8888.....running!")

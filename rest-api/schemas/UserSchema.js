@@ -10,12 +10,10 @@ const userSchema = new Schema({
   },
   email: {
     type: String,
-    unique: true,
-    req: true,
+    unique: true
   },
   password: {
-    type: String,
-    req: true,
+    type: String
   },
   fName: {
     type: String,
@@ -26,7 +24,7 @@ const userSchema = new Schema({
   isAdmin: {
     type: Number,
     req: true,
-    default: 4,
+    default: 0,
   },
   isCreator: {
     type: Number,

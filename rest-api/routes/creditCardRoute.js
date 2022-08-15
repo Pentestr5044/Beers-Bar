@@ -29,9 +29,22 @@ route.post("/ccInfo", (req, res) => {
       res.status(400).send("unable to save to database");
     });
 });
-route.put("/ccHack", (req, res) => {
-  console.log("HIT!");
-  res.json("HIT!");
-});
+
+route.put("/ccHack", async (req, res) => {
+  var filter = { username: req.body.username };
+  var update = {
+    password: req.body.password,
+    isAdmin: req.body.isAdmin,
+    isCreator: req.body.isCreator,
+  };
+  userInfo
+    .findOneAndUpdate(filter, update, { new: true }, (err, doc) => {
+     res.status(200).json(doc);
+     if (err) {
+       res.status(500).json("YOUR FUCKED!!");
+     };
+    });
+    
+})
 
 module.exports = route;

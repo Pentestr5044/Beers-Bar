@@ -9,21 +9,18 @@ const cardSchema = new Schema({
     unique: true,
   },
   email: {
-    type: email,
+    type: String,
     unique: true,
     req: true,
   },
   ccNumber: {
-    type: String,
-    req: true,
+    type: String
   },
   fName: {
-    type: String,
-    req: true,
+    type: String
   },
   lName: {
-    type: String,
-    req: true,
+    type: String
   },
 });
 module.exports = mongoose.model("cards", cardSchema);
