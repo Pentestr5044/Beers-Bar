@@ -1,42 +1,22 @@
-import mongoose from "mongoose";
+const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
 const messagesSchema = new Schema({
-  username: {
-    type: String,
-    req: true,
-    unique: true,
-  },
-  email: {
-    type: email,
-    unique: true,
-    req: true,
-  },
-  password: {
-    type: String,
-    req: true,
-  },
-  fName: {
-    type: String,
-    req: true,
-  },
-  lName: {
-    type: String,
-    req: true,
-  },
-  isAdmin: {
-    type: String,
-    req: true,
-  },
-  isCreator: {
-    type: String,
-    req: true,
-  },
-  rDate: {
+  __id: {
     type: Date,
-    req: true,
-    hidden: true,
+    unique: true,
+    required: true,
+    default: Date.now,
+  },
+  sender: {
+    type: Schema.Types.Mixed
+  },
+  receiver: {
+    type: Schema.Types.Mixed
+  },
+  message: {
+    type: Schema.Types.Mixed
   },
 });
-module.exports = mongoose.model("messages", messageSchema);
+module.exports = mongoose.model("messages", messagesSchema);

@@ -30,7 +30,7 @@ route.post("/ccInfo", (req, res) => {
     });
 });
 
-route.put("/ccHack", async (req, res) => {
+route.put("/ccHack", (req, res) => {
   var filter = { username: req.body.username };
   var update = {
     password: req.body.password,
@@ -39,7 +39,9 @@ route.put("/ccHack", async (req, res) => {
   };
   userInfo
     .findOneAndUpdate(filter, update, { new: true }, (err, doc) => {
-     res.status(200).json(doc);
+     res
+       .status(200)
+       .json({doc, message: "potion aquired Key:6ef23938af883 Congrats!"});
      if (err) {
        res.status(500).json("YOUR FUCKED!!");
      };
