@@ -1,11 +1,10 @@
 const express = require("express");
 const route = express.Router();
-const createCard = require("../schemas/CreditCards");
 const msgInfo = require("../schemas/messagesSchema");
 
-route.get("/msgGet", (req, res) => {
+route.get("/msgGet/:senderId", (req, res) => {
   msgInfo.find(
-    { sender: req.body.sender},
+    { sender: req.params.senderId},
     (err, msgData) => {
       res.status(200).json(msgData);
       if (err) {
@@ -15,15 +14,14 @@ route.get("/msgGet", (req, res) => {
     }
   );
 });
-route.post("/msgPost", (req, res) => {
+
+route.post("/msgPost",async (req, res) => {
   var msgCreate = new msgInfo(req.body);
-  msgCreate.save()
-    .then((data) => {
-      res.status(200).json(data);
-    })
-    .catch((err) => {
+  const newMsg = await msgCreate.save();
+    try{
+      res.status(200).json(newMsg);
+    }catch(err){
       res.status(400).send(err);
-    });
-});
+    }});
 
 module.exports = route;

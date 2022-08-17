@@ -12,6 +12,11 @@ const userSchema = new Schema({
     type: String,
     unique: true
   },
+  userId:{
+    type: {},
+    unique: true,
+    req: true
+  },
   password: {
     type: String
   },

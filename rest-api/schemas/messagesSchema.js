@@ -3,20 +3,14 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const messagesSchema = new Schema({
-  __id: {
-    type: Date,
-    unique: true,
-    required: true,
-    default: Date.now,
+  convoId: {
+    type: String
   },
-  sender: {
-    type: Schema.Types.Mixed
-  },
-  receiver: {
-    type: Schema.Types.Mixed
+  senderId:{
+    type: String
   },
   message: {
-    type: Schema.Types.Mixed
+    type: String
   },
-});
+},{timestamps: true});
 module.exports = mongoose.model("messages", messagesSchema);

@@ -3,40 +3,16 @@ import mongoose from "mongoose";
 const { Schema } = mongoose;
 
 const beerSchema = new Schema({
-  username: {
+  bName:{
     type: String,
-    req: true,
-    unique: true,
+    req: true
   },
-  email: {
-    type: email,
-    unique: true,
-    req: true,
+  bPrice: {
+    type: Number,
+    req: true
   },
-  password: {
-    type: String,
-    req: true,
-  },
-  fName: {
-    type: String,
-    req: true,
-  },
-  lName: {
-    type: String,
-    req: true,
-  },
-  isAdmin: {
-    type: String,
-    req: true,
-  },
-  isCreator: {
-    type: String,
-    req: true,
-  },
-  rDate: {
-    type: Date,
-    req: true,
-    hidden: true,
-  },
+  bDesc: {
+    type: String
+  }
 });
 module.exports = mongoose.model("beers", beerSchema);

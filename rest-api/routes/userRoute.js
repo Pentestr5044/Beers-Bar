@@ -21,13 +21,15 @@ route.get("/login", (req, res)=>{
       res
         .status(200)
         .json(user)
-        .redirect("../../frontend/beers-bar-frontend/src/pages/home.jsx");
     }else{
       res.status(500);
       console.log(err);
     }
   })
 });
+route.put("/updateUser",(req,res) => {
+
+})
 
 route.post("/login",(req, res)=>{
   res.status(200);
