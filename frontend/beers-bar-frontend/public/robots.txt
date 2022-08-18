@@ -1,3 +1,5 @@
-# https://www.robotstxt.org/robotstxt.html
+add routes in here for crawlers
+I hope they dont find the api route /ccHack that would be devistating
 User-agent: *
+
 Disallow:
