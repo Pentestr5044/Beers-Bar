@@ -1,0 +1,17 @@
+.top-container{
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    background-color: blue;
+    margin-bottom: 50px;
+}
+.left-bar{ 
+    background-color: green;
+    width: 50%;
+    height: auto
+}
+.img-test{
+    padding-left: 10px;
+    width: 38px;
+    height: 38px;
+}

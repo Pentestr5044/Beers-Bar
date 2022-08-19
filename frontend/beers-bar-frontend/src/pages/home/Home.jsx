@@ -1,5 +1,14 @@
+import Topbar from '../../components/Topbar';
+
+
+
+
 export default function Home() {
   return (
-    <div>Home</div>
+        
+  <div>
+    <div> <Topbar/> </div> 
+    <div className="home-body">home</div>
+  </div>
   )
 }
