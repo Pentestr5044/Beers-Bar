@@ -2,28 +2,37 @@
     width: 100%;
     height: 5vh;
     display: flex;
-    background-color: blue;
+    background-image: url('../assets/texture/texture.jpg');
     margin-bottom: 50px;
 }
-.left-bar{
-    width: 50%;
-    height: auto
-}
 .img-test{
-
+    background-color: white;
     width: 38px;
     height: 38px;
 }
+.left-bar{ 
+    flex: 1;
+
+}
 .right-bar{ 
-    display: flex;
+    flex: 5;
 }
 .topbar-btn-menu-left{
-
+    border-color: transparent;
     background-color: transparent;
     cursor: pointer;
 }
 .topbar-btn-menu{
-    margin-left: 14%;
+    border-color: transparent;
     cursor: pointer;
     background-color: transparent;
+}
+.title-cont{
+    flex: 8;
+    text-align: center;
+}
+.middle-title{
+    text-align: center;
+    font-size: 25px;
+    color: white;
 }
