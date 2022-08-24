@@ -1,22 +1,30 @@
 import Topbar from '../../components/Topbar';
 import './home.css'
-
+import Leftbar from '../../components/LeftBar';
+import Itemview from '../../components/Itemview'
 
 
 export default function Home() {
   return (
         
   <div>
-    <div> <Topbar/> </div> 
-    <div className="home-body">
+    <>
+    <Topbar/> </>
+  <div className="home-body">
+      <div  className="left"><Leftbar/></div>
+    <div  className="home-header">
       <h1>Weclome user</h1>
-      <span className="users-me">
-        <label htmlFor="messageC">User messages</label>
-        <ul id="messageC" className="msg-container">
-          
-        </ul>
-      </span>
+      <div className="item-cont">
+        <Itemview/>
+        <Itemview/>
+        <Itemview/>
+        <Itemview/>
+        <Itemview/>
       </div>
+    </div>
+  
+  </div>
+
   </div>
   )
 }

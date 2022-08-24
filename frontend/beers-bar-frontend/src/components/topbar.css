@@ -9,6 +9,8 @@
     background-color: white;
     width: 38px;
     height: 38px;
+    border-radius: 30%;
+    padding: 2px;
 }
 .left-bar{ 
     flex: 1;
@@ -21,11 +23,13 @@
     border-color: transparent;
     background-color: transparent;
     cursor: pointer;
+    margin-left: 5px;
 }
 .topbar-btn-menu{
     border-color: transparent;
     cursor: pointer;
     background-color: transparent;
+    margin-right: 10px;
 }
 .title-cont{
     flex: 8;

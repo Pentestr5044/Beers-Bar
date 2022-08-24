@@ -1,0 +1,16 @@
+.home-header{
+    flex: 10;
+    text-align: center;
+}
+.home-body{
+    display: flex;
+    height: 80vh;
+    align-content: center;
+}
+.left{
+    flex: 2;
+}
+.item-cont{
+    display: flex;
+    justify-content: space-around;
+}

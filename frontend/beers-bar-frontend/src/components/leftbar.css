@@ -1,0 +1,23 @@
+.listMenu{
+    list-style: none;
+    font-size: 30px;
+    font-weight: bold;
+    
+    
+}
+.leftbar-links{ 
+    text-decoration: none;
+    color: black;
+}
+.leftCont{
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    height: 80vh;
+    justify-content: space-around;
+
+}
+.leftBar{ 
+    display: flex;
+}

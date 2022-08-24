@@ -1,0 +1,15 @@
+.item-image{
+    padding-top: 5px;
+    width: 80%;
+    height: 30%;
+}
+.item-des{
+    width: 25%;
+    height: 25%;
+    border-radius: 2%;
+    border: 2px solid;
+    margin: 3%;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
