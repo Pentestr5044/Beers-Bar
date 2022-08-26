@@ -19,7 +19,7 @@ export default function Topbar() {
                 <button className="topbar-btn-menu-left" title="Buy a Beer"><img className="img-test" id="wallet" src={buyImage} alt="null" altText="buy a beer"/></button>
             </div>
             <div className="title-cont">
-              <h2 className="middle-title">Beers' Bar Vulnerable API</h2>
+              <a className="title-link" href="/"><h2 className="middle-title">Beers' Bar Vulnerable API</h2></a>
             </div>
             <div className="right-bar">              
                 <button className="topbar-btn-menu" title="Login"><img className="img-test" id="wallet" src={personImage} alt="null" altText="buy a beer"/></button>

@@ -2,17 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter,Routes,Route,} from 'react-router-dom';
 import Home from './pages/home/Home';
+import About from './pages/about/about'
+import Admin from './pages/admin/admin'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/admin" element={<Admin />} />
     </Routes>
   </BrowserRouter>
 );
  //<Route path="/home" element={<Home />} />
-      //<Route path="/about" element={<About />} />
+      //
       //<Route path="/creators" element={<Creator />} />
       //<Route path="/login" element={<Login />} />
       //<Route path="/registration" element={<Register />} />
@@ -27,6 +31,6 @@ root.render(
       //<Route path="/chatrooms" element={<Chatrooms />} />
       //<Route path="/buy-a-gift" element={<BuyABeer />} />
       //<Route path="/my/bio" element={<Bio />} />
-      //<Route path="/admin" element={<Admin />} />
+      //
       //<Route path="/about" element={<About />} />
 
