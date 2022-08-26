@@ -4,6 +4,9 @@
     height: 30%;
 }
 .item-des{
+    padding: 4px;
+}
+.item-des{
     width: 25%;
     height: 25%;
     border-radius: 2%;
