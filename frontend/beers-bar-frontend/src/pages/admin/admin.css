@@ -4,15 +4,38 @@
     text-align: center;
 }
 .admin-left{
+    border-left: 1px solid;
+    border-top: 1px solid;
     height: 80vh;
     flex: 1;
+    justify-content: space-around;
     padding-left: 4px;
-    background-color: aqua;
+}
+.list-item{
+    list-style: none;
+}
+.edit-user:hover{ 
+    background-color: white;
+    color: black;
+    cursor:pointer;
+}
+.admin-img{
+    width: 80%;
+    height:80%;
+}
+.edit-user{
+    background-color: black;
+    color:white;
+    margin-top: 5%;
+    height: 60%;
+    width: 95%;
+
 }
 .admin-middle{
+    color:white;
     height: 80vh;
     flex: 2;
-    background-color: rgb(32, 108, 108);
+    background-color: rgb(21, 18, 18)
 }
 .admin-right{
     height: 80vh;
