@@ -1,0 +1,7 @@
+.creator-cont{
+    display: flex;
+}
+.creator-menu{
+    flex: 3;
+    margin-left: 5px;
+}

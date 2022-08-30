@@ -28,7 +28,7 @@ export default function Topbar() {
                 <button className="topbar-btn-menu" title="Messages"><img className="img-test" id="wallet" src={messageImage} alt="null" /></button>
                 <button className="topbar-btn-menu" title="Profile"><img className="img-test" id="wallet" src={profImage} alt="null" /></button>
                 <button className="topbar-btn-menu" title="About Our Beer"><img className="img-test" id="wallet" src={aboutImage} alt="null" /></button>
-                <button className="topbar-btn-menu" title="Creator"><img className="img-test" id="wallet" src={createImage} alt="null" /></button>
+                <a href="/creators"><button className="topbar-btn-menu" title="Creator"><img className="img-test" id="wallet" src={createImage} alt="null" /></button></a>
                 <button className="topbar-btn-menu" title="Admin"><img className="img-test" id="wallet" src={adminImage} alt="null" /></button>
               </div>
         </span>
