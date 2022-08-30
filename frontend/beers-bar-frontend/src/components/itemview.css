@@ -14,5 +14,9 @@
     margin: 3%;
     background-color: black;
     color: white;
+
+}
+.buy-btn{
     cursor: pointer;
+    margin-left: 15px;
 }

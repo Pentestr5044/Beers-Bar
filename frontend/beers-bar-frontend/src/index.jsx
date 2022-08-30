@@ -4,6 +4,8 @@ import {BrowserRouter,Routes,Route,} from 'react-router-dom';
 import Home from './pages/home/Home';
 import About from './pages/about/about'
 import Admin from './pages/admin/admin'
+import BuyMeABeer from './pages/buybeer/buyMeABeer'
+import Buybeer from './pages/buybeer/Buybeer'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,6 +14,9 @@ root.render(
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/admin" element={<Admin />} />
+      <Route path="/buyabeer" element={<BuyMeABeer />} />
+      <Route path="/buybeer/:beerID" element={<Buybeer/>}/>
+
     </Routes>
   </BrowserRouter>
 );
@@ -29,7 +34,7 @@ root.render(
       //<Route path="/admin/meeting" element={<MeetingTable />} />\
       //<Route path="/logout" element={<Logout />} />
       //<Route path="/chatrooms" element={<Chatrooms />} />
-      //<Route path="/buy-a-gift" element={<BuyABeer />} />
+      //
       //<Route path="/my/bio" element={<Bio />} />
       //
       //<Route path="/about" element={<About />} />
