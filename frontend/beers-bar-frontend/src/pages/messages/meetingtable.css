@@ -1,0 +1,15 @@
+.msg-con{
+    text-align: center;
+    display: flex;
+    height: 80%;
+    width: 100%;
+}
+.msg-left{
+    flex:3;
+}
+.msg-mid{
+    flex: 3;
+}
+.msg-right{
+    flex: 3;
+}

@@ -7,6 +7,9 @@ import Admin from './pages/admin/admin'
 import BuyMeABeer from './pages/buybeer/buyMeABeer'
 import Buybeer from './pages/buybeer/Buybeer'
 import Creator from './pages/creators/creator'
+import Gift from './pages/gift/gift'
+import Login from './pages/login/login'
+import Messages from './pages/messages/meetingTable'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +21,9 @@ root.render(
       <Route path="/buyabeer" element={<BuyMeABeer />} />
       <Route path="/buybeer/:beerID" element={<Buybeer/>}/>
       <Route path="/creators" element={<Creator />} />
+      <Route path="/gift" element={<Gift />}/>
+      <Route path="/login" element={<Login />} />
+      <Route path="/messages" element={<Messages />} />
 
     </Routes>
   </BrowserRouter>
@@ -25,7 +31,7 @@ root.render(
  //<Route path="/home" element={<Home />} />
       //
       //
-      //<Route path="/login" element={<Login />} />
+      //
       //<Route path="/registration" element={<Register />} />
       //<Route path="/profile-update" element={<UpdateProfile />} />
       //<Route path="/staff" element={<Staff />} />

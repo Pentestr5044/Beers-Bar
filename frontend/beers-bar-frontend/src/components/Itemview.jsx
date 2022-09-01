@@ -10,7 +10,7 @@ export default function Itemview({item}) {
             <h2 className="item-header">Item</h2>
             <h3>{item.price}</h3>
             <p>{item.beerDesc}</p>
-            <button className="buy-btn" ><Link to={{
+            <button className="buy-btn" ><Link className="link" to={{
       pathname:"/buybeer/"+item.beerId
     }}>Buy this beer</Link></button>
         </span>

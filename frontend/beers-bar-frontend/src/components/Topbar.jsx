@@ -22,10 +22,10 @@ export default function Topbar() {
               <a className="title-link" href="/"><h2 className="middle-title">Beers' Bar Vulnerable API</h2></a>
             </div>
             <div className="right-bar">              
-                <button className="topbar-btn-menu" title="Login"><img className="img-test" id="wallet" src={personImage} alt="null" /></button>
+                <a href="/login"><button className="topbar-btn-menu" title="Login"><img className="img-test" id="wallet" src={personImage} alt="null" /></button></a>
                 <button className="topbar-btn-menu" title="Logout"><img className="img-test" id="wallet" src={person2Image} alt="null" /></button>
                 <button className="topbar-btn-menu" title="Gift A Beer"><img className="img-test" id="wallet" src={giftImage} alt="null" /></button>
-                <button className="topbar-btn-menu" title="Messages"><img className="img-test" id="wallet" src={messageImage} alt="null" /></button>
+                <a href="/messages"><button className="topbar-btn-menu" title="Messages"><img className="img-test" id="wallet" src={messageImage} alt="null" /></button></a>
                 <button className="topbar-btn-menu" title="Profile"><img className="img-test" id="wallet" src={profImage} alt="null" /></button>
                 <button className="topbar-btn-menu" title="About Our Beer"><img className="img-test" id="wallet" src={aboutImage} alt="null" /></button>
                 <a href="/creators"><button className="topbar-btn-menu" title="Creator"><img className="img-test" id="wallet" src={createImage} alt="null" /></button></a>
