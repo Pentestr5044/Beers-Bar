@@ -8,14 +8,14 @@ export const Users = [
     fName: "jon",
     lName: "bar",
     id: 1,
-    profileP: < Beserker />
+    profileP: "brute-forcing-beserker.jpg"
   },
   {
     username: "jim",
     fName: "jim",
     lName: "tavern",
     id: 2,
-    profileP: <Priestess />
+    profileP: <Priestess />,
   },
 ];
 

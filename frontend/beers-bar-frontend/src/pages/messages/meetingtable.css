@@ -5,7 +5,13 @@
     width: 100%;
 }
 .msg-left{
-    flex:3;
+    flex:2;
+}
+.image{
+    width:50%;
+    height:50%;
+    border-style: groove;
+    border-radius: 50%;
 }
 .msg-mid{
     flex: 3;

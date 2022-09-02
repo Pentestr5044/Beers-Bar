@@ -1,0 +1,30 @@
+.profile-wrapper{
+    display:flex;
+}
+.profile-left{
+    padding-left: 5%;
+    flex: 4;
+}
+.profile-right{
+    width: 50vw;
+}
+.ppic{
+    width: 50vw;
+    height: 50vh;
+    border-top-left-radius: 60%;
+}
+.img-feed{
+    margin-left: 30%;
+    width: 25%;
+    height: 25%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.edit-profile{
+    font-size: x-large;
+    border-radius: 5.5%;
+}
+.profile-text{
+    color: red;
+    font-size: 90px;
+}
