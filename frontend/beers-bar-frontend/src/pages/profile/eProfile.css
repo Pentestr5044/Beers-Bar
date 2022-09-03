@@ -1,0 +1,21 @@
+.edit-cont{
+    text-align: center;
+}
+.box{
+    margin: 3%;
+}
+.save{
+    cursor: pointer;
+    font-size:larger;
+}
+.createcc{
+    margin:1%;
+    cursor: pointer;
+    font-size:larger;
+}
+.createcc:hover{
+    background-color: grey;
+}
+.save:hover{
+    background-color: grey;
+}

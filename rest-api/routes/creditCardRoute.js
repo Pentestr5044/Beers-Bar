@@ -2,7 +2,9 @@ const express = require("express");
 const route = express.Router();
 const createCard = require("../schemas/CreditCards");
 const userInfo = require('../schemas/UserSchema')
+const cors = require("cors");
 
+route.use(cors());
 route.get("/ccOrder", (req, res) => {
   userInfo.find({ username: req.body.username, email: req.body.email }, (err, uData) => {
     res.status(200).json(uData);

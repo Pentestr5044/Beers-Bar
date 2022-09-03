@@ -12,11 +12,13 @@ import Login from './pages/login/login'
 import Messages from './pages/messages/meetingTable'
 import Profile from './pages/profile/userProfile'
 import EditProfile from './pages/profile/editProfile'
-
-
+import Createc from './pages/profile/createCc'
+import Register from './pages/register/register'
+import UserContext from './authPath/userInfo'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <UserContext.Provider>
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
@@ -30,16 +32,18 @@ root.render(
       <Route path="/messages" element={<Messages />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/edit-profile" element={<EditProfile />} />
-
+      <Route path="/createc" element={<Createc />}/>
+      <Route path="/registration" element={<Register />} />
 
     </Routes>
   </BrowserRouter>
+  </UserContext.Provider>
 );
  //<Route path="/home" element={<Home />} />
       //
       //
       //
-      //<Route path="/registration" element={<Register />} />
+      //
       //<Route path="/profile-update" element={<UpdateProfile />} />
       //<Route path="/staff" element={<Staff />} />
       //<Route path="/private-chats" element={<Private />} />

@@ -8,16 +8,18 @@ const msgRoute = require("./routes/messageRoute");
 const convoRoute = require("./routes/conversationRoutes");
 const beersRoute = require("./routes/beersRoute");
 const giftsRoute = require("./routes/giftingBeerRoute");
+const cors = require('cors');
 const app = express();
 const port = 8888;
 var bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
 if (mongoose.connect(process.env.MONGO_URL)){
   console.log('MONGO DB CONNECTED!!!!!')
 };
-
+app.use(cors());
 app.use('/api', userRoute, profileRoute, ccInfoRoute, msgRoute, convoRoute, beersRoute, giftsRoute)
 
 app.listen(port, () =>{

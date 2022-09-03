@@ -1,7 +1,9 @@
 const express = require('express');
 const route = express.Router();
 const userModel = require('../schemas/UserSchema');
+const cors = require('cors');
 
+route.use(cors())
 route.post("/register", (req, res) => {
   var addUser = new userModel(req.body);
   addUser.save()
@@ -12,7 +14,7 @@ route.post("/register", (req, res) => {
       res.status(400).send("unable to save to database");
     });
 });
-route.get("/login", (req, res)=>{
+route.post("/login", (req, res)=>{
   var username1 = req.body.username;
   var password1 = req.body.password;
 //var jwt = req.body.jwt;

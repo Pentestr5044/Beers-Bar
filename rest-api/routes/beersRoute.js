@@ -1,7 +1,9 @@
 const express = require("express");
 const route = express.Router();
 const beerInfo = require("../schemas/beerSchema");
+const cors = require("cors");
 
+route.use(cors());
 
 //post to create
 route.post("/beers", async (req,res)=>{

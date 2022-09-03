@@ -1,7 +1,9 @@
 const express = require("express");
 const route = express.Router();
 const createProfile = require('../schemas/profileSchema');
+const cors = require("cors");
 
+route.use(cors());
 
 route.get('/profile', (req, res)=>{
     createProfile.find({username: req.body.username},(err, pfData)=>{

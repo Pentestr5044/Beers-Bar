@@ -1,7 +1,9 @@
 const express = require("express");
 const route = express.Router();
 const convoModal = require("../schemas/conversationsSchema");
+const cors = require("cors");
 
+route.use(cors());
 //make new convo
 route.post("/convo", async (req,res) => {
     var newConvo = new convoModal({

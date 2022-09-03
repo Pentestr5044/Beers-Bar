@@ -1,7 +1,9 @@
 const express = require("express");
 const route = express.Router();
 const beerGift = require("../schemas/GiftedBeer");
+const cors = require("cors");
 
+route.use(cors());
 //post to create
 route.post("/beersGift", async (req, res) => {
   const newGift = new beerGift(req.body);

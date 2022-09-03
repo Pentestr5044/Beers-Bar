@@ -1,10 +1,15 @@
 import './login.css';
-import {useState} from 'react';
-
+import {useState, useContext} from 'react';
+import UserContext from '../../authPath/userInfo'
+import axios from 'axios';
 export default function Login() {
+  const User = useContext(UserContext)
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  console.log(JSON.stringify({username,password}));
+  const lpayload = {
+    username: username,
+    password: password
+  };
   return (
     <div className="login-cont">
         <div className="loginwrapper">
@@ -16,7 +21,7 @@ export default function Login() {
             <input id="password" type="text" onChange={(e)=>setPassword(e.target.value)} className="username" placeholder="Please enter a password"/><br/>
             <button className="login-btn">login</button>
             <button className="login-btn">Forgot password</button>
-            <button className="login-btn">I NEED TO REGISTER</button>
+            <a href="/registration"><button className="login-btn">I NEED TO REGISTER!</button></a>
         </div>
     </div>
   )

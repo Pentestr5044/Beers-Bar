@@ -1,7 +1,9 @@
 const express = require("express");
 const route = express.Router();
 const msgInfo = require("../schemas/messagesSchema");
+const cors = require("cors");
 
+route.use(cors());
 route.get("/msgGet/:senderId", (req, res) => {
   msgInfo.find(
     { sender: req.params.senderId},
