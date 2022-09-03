@@ -27,10 +27,21 @@ route.get("/login", (req, res)=>{
     }
   })
 });
-route.put("/updateUser",(req,res) => {
-
-})
-
+route.put("/updateUser", (req, res) => {
+  var filter = { username: req.body.username };
+  var update = {
+    email: req.body.email, 
+    username: req.body.username
+  };
+  userInfo.findOneAndUpdate(filter, update, { new: true }, (err, doc) => {
+    res
+      .status(200)
+      .json({ doc, message: "potion aquired Key:6ef23938af883 Congrats!" });
+    if (err) {
+      res.status(500).json("YOUR FUCKED!!");
+    }
+  });
+});
 route.post("/login",(req, res)=>{
   res.status(200);
   console.log("oh shit I didnt mean to leave this debug here! DELETE THIS DEBUG 3 potatoes 1 milk 4 carrots, client called at 4:30pm, marry had a little lamb. the number for an admin account is 12! user objects can sometimes be a good place to find parameters to test.")

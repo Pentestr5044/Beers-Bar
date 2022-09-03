@@ -21,8 +21,9 @@
     flex-wrap: wrap;
 }
 .edit-profile{
+    box-shadow: 10px 5px 5px rgb(48, 47, 47);
     font-size: x-large;
-    border-radius: 5.5%;
+    border-radius: 9.5%;
 }
 .profile-text{
     color: red;

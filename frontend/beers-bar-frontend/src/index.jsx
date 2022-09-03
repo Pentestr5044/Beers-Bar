@@ -11,6 +11,9 @@ import Gift from './pages/gift/gift'
 import Login from './pages/login/login'
 import Messages from './pages/messages/meetingTable'
 import Profile from './pages/profile/userProfile'
+import EditProfile from './pages/profile/editProfile'
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,6 +29,8 @@ root.render(
       <Route path="/login" element={<Login />} />
       <Route path="/messages" element={<Messages />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/edit-profile" element={<EditProfile />} />
+
 
     </Routes>
   </BrowserRouter>
