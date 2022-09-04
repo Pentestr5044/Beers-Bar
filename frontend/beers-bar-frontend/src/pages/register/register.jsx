@@ -20,13 +20,15 @@ export default function Register() {
             fName:fname,
             lName:lname
     }
+    let User = {}
     function OnClick(){
         axios.post('http://localhost:8888/api/register', postData, {
             headers:{
                 "Content-type": "application/json"
             }
         }).then((response)=>{
-            console.log(JSON.stringify(response.data))
+            User=response.data
+            console.log(User)
         })
     }
   return (

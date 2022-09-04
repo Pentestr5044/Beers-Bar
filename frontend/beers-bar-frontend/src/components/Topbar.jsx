@@ -9,9 +9,12 @@ import profImage from '../assets/icons/fingerprint.svg';
 import aboutImage from '../assets/icons/tornado.svg';
 import createImage from '../assets/icons/snow3.svg';
 import adminImage from '../assets/icons/snow2.svg';
+import {useContext} from 'react';
+import {AuthContext} from '../authPath/AuthContext';
 
 
 export default function Topbar() {
+  const {user} = useContext(AuthContext);
   return (
     <div>
         <span className="top-container">
@@ -23,13 +26,13 @@ export default function Topbar() {
             </div>
             <div className="right-bar">              
                 <a href="/login"><button className="topbar-btn-menu" title="Login"><img className="img-test" id="wallet" src={personImage} alt="null" /></button></a>
-                <button className="topbar-btn-menu" title="Logout"><img className="img-test" id="wallet" src={person2Image} alt="null" /></button>
+                <a href='/logout'><button className="topbar-btn-menu" title="Logout"><img className="img-test" id="wallet" src={person2Image} alt="null" /></button></a>
                 <button className="topbar-btn-menu" title="Gift A Beer"><img className="img-test" id="wallet" src={giftImage} alt="null" /></button>
                 <a href="/messages"><button className="topbar-btn-menu" title="Messages"><img className="img-test" id="wallet" src={messageImage} alt="null" /></button></a>
                 <a href="/profile"><button className="topbar-btn-menu" title="Profile"><img className="img-test" id="wallet" src={profImage} alt="null" /></button></a>
                 <button className="topbar-btn-menu" title="About Our Beer"><img className="img-test" id="wallet" src={aboutImage} alt="null" /></button>
-                <a href="/creators"><button className="topbar-btn-menu" title="Creator"><img className="img-test" id="wallet" src={createImage} alt="null" /></button></a>
-                <button className="topbar-btn-menu" title="Admin"><img className="img-test" id="wallet" src={adminImage} alt="null" /></button>
+                {user.creator===6?<a href="/creators"><button className="topbar-btn-menu" title="Creator"><img className="img-test" id="wallet" src={createImage} alt="null" /></button></a>:null}
+                {user.admin===16?<button className="topbar-btn-menu" title="Admin"><img className="img-test" id="wallet" src={adminImage} alt="null" /></button>:null}
               </div>
         </span>
     </div>
