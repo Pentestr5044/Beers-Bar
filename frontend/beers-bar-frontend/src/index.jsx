@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {AuthContextProvider} from './authPath/AuthContext'
-import App from './App'
+import App from './App';
+import {CookiesProvider} from 'react-cookie';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <AuthContextProvider>
-  <App/>
-  </AuthContextProvider>
+  <CookiesProvider>
+    <App/>
+  </CookiesProvider>
+</AuthContextProvider>
 );
  //<Route path="/home" element={<Home />} />
       //

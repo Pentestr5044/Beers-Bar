@@ -3,6 +3,7 @@ import {useRef, useContext} from 'react';
 import {loginCall} from '../../ApiLogin';
 import { AuthContext } from '../../authPath/AuthContext';
 
+
 export default function Login() {
   const username = useRef()
   const password = useRef()
@@ -10,7 +11,6 @@ export default function Login() {
   const clickHandler = (e)=>{
     loginCall({username:username.current.value,password:password.current.value}, dispatch)
   };
-  console.log(user)
 
   return (
     <div className="login-cont">
