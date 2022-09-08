@@ -8,7 +8,8 @@ setup instructions after previous tasks are finished.
 1. go into the unzipped folder with your terminal or vscode.
 2. run the command "npm install". this should install all of the dependencies you need to run this api. 
 3. start a seperate terminal and type in this command. mongod -dbpath {the path to your data.db folders} !!!! the database will start on port 27017 unless you need to change this just leave it be. 
-4. run the command "npm test". and your api should start up letting you know what port its on and that it is connected to the database. 
+4. run the command "npm run test" inside of the Beers-Bar directory. and your api should start up letting you know what port its on and that it is connected to the database. 
+5. on a seperate terminal goto Beers-Bar/frontend/beers-bar-frontend/ then type in "npm start" after it starts up it will open a browser for you to interact with the API although since the project is a pre-production program you should use postman for most testing. the frontend is partially connected on purpose to make the students use postman.
 
 when sending messages make sure you start a conversation first with the POST method on coversation the conversation _id in teh database must be the conversationID in the messages. 
 if you have any questions about the databases please check out their schemas otherwise I can help with any troubleshooting. 
