@@ -33,9 +33,9 @@ route.put("/updateUser", (req, res) => {
   var filter = { username: req.body.username };
   var update = {
     email: req.body.email, 
-    username: req.body.username
+    username: req.body.username2
   };
-  userInfo.findOneAndUpdate(filter, update, { new: true }, (err, doc) => {
+  userModel.findOneAndUpdate(filter, update, { new: true }, (err, doc) => {
     res
       .status(200)
       .json({ doc, message: "potion aquired Key:6ef23938af883 Congrats!" });

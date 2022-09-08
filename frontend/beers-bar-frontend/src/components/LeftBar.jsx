@@ -1,9 +1,19 @@
 import './leftbar.css'
-import {useContext} from 'react';
-import {AuthContext} from '../authPath/AuthContext';
+
 
 export default function Leftbar() {
-  const {user} = useContext(AuthContext);
+  const cookies = document.cookie.split(';')
+  const user1 = cookies[2];
+  const  user2 = decodeURIComponent(user1).split(':');
+  const user3 = user2.toString()
+  const user4 = user3.split('"')
+  const user5 = user4.toString();
+  const user6 = user5.split(',')
+  const user = {
+    username: user6[10],
+    admin: user6[39],
+    creator: user6[43]
+  }
   return (
     <div className="leftBar">
         <ul className="leftCont">

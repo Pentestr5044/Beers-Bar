@@ -19,3 +19,23 @@
 .save:hover{
     background-color: grey;
 }
+.pro-cont{
+    display: flex;
+}
+.opt-cont{
+    text-align: center;
+    flex: 4;
+    font-size: larger;
+}
+.inpt{
+    padding-bottom: 3%;
+    font-size: x-large;
+}
+.abt{
+    height: 15vh;
+    width: 10vw;
+}
+.int{
+    height: 15vh;
+    width: 10vw;
+}

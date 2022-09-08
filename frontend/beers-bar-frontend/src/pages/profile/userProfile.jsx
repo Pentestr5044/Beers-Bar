@@ -2,9 +2,30 @@ import './profile.css'
 import Topbar from '../../components/Topbar'
 import Itemview from '../../components/Itemview'
 import {Beer} from '../../dummydata'
+import axios from 'axios';
+import {useState} from 'react';
 
-export default function userProfile() {
+export default function UserProfile() {
+    const [response, setResponse] = useState({});
     const image = require('../../assets/tavern/chatroom.jpg')
+    const cookies = document.cookie.split(';')
+    const user1 = cookies[2];
+    const  user2 = decodeURIComponent(user1).split(':');
+    const user3 = user2.toString()
+    const user4 = user3.split('"')
+    const user5 = user4.toString();
+    const user6 = user5.split(',')
+    const user = {
+    email: user6[16],
+    username: user6[10],
+    admin: user6[39],
+    creator: user6[43]
+  }
+  const payload = {
+    username: user.username
+  };
+
+  console.log(response)
   return (
     <>
         <Topbar/>
@@ -16,11 +37,10 @@ export default function userProfile() {
                 </div>
                 <div className="profile-right">
                     <img src={image} alt="" className="ppic" id="profilep"/>
-                    <h1 className="uN">User name</h1>
-                    <h3 className="email">User email</h3>
-                    <h3 className="userAddress">Users address</h3>
-                    <h3 className="userdesc">
-                        This is where the user bio will go!!
+                    <h1 className="uN">{user.username}</h1>
+                    <h3 className="email">{user.email}</h3>
+                    <h3 className="userAddress">hello</h3>
+                    <h3 className="userdesc">hello
                     </h3>
                     <hr/>
                     <span className="img-feed">

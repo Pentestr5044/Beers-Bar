@@ -1,11 +1,39 @@
 import {useState} from 'react';
 import './eProfile.css';
-import Topbar from '../../components/Topbar.jsx'
+import Topbar from '../../components/Topbar.jsx';
+import axios from 'axios';
 
 export default function EditProfile() {
-  const [username, setUsername] = useState("");
+  const cookies = document.cookie.split(';')
+  const user1 = cookies[2];
+  const  user2 = decodeURIComponent(user1).split(':');
+  const user3 = user2.toString()
+  const user4 = user3.split('"')
+  const user5 = user4.toString();
+  const user6 = user5.split(',')
+  const user = {
+    username: user6[10],
+    admin: user6[39],
+    creator: user6[43]
+  }
+  const username = user.username
+  const [username2, setUsername] = useState("");
   const [email, setEmail] = useState("");
-  console.log(JSON.stringify({email,username}));
+  const uInfo ={
+    username2: username2,
+    username: username,
+    email: email
+  }
+  const HandleClick = async (e) => {
+    try{
+      const res = await axios.put("http://localhost:8888/api/updateUser",uInfo)
+      console.log(res.data)
+    }catch(err){
+      console.log(err)
+
+    }
+  }
+  
 
   return (
     <div>
@@ -20,7 +48,8 @@ export default function EditProfile() {
             <input onChange={(e)=>setEmail(e.target.value)}id="email-e" type="text" className="email-edit" /><br/>
             </div>
             <a href="/createc"><button className="createcc">Create credit card for future use!</button></a>
-            <button className="save">Save my info!</button>
+            <a href="/editinfo"><button className="createcc">Edit your info here!</button></a>
+            <button onClick={HandleClick} className="save">Save my info!</button>
         </div>
     </div>
   )

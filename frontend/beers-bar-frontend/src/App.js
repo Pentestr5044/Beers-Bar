@@ -15,6 +15,7 @@ import EditProfile from "./pages/profile/editProfile";
 import Createc from "./pages/profile/createCc";
 import Register from "./pages/register/register";
 import Logout from './pages/login/logout';
+import EditInfo from './pages/profile/editInfo'
 import {AuthContext} from './authPath/AuthContext';
 
 
@@ -28,6 +29,7 @@ export default function App() {
           path="/"
           element={user ? <Home /> : <Login />} />
         <Route path="/about" element={<About />} />
+        <Route path="/editinfo" element={<EditInfo/>}/>
         <Route path="/admin" element={<Admin />} />
         <Route path="/buyabeer" element={<BuyMeABeer />} />
         <Route path="/buybeer/:beerID" element={<Buybeer />} />
