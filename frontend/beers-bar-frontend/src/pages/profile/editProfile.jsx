@@ -16,12 +16,11 @@ export default function EditProfile() {
     admin: user6[39],
     creator: user6[43]
   }
-  const username = user.username
   const [username2, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const uInfo ={
     username2: username2,
-    username: username,
+    username: user.username,
     email: email
   }
   const HandleClick = async (e) => {

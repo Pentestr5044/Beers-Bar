@@ -1,23 +1,34 @@
 import {useState} from 'react';
-import Topbar from '../../components/Topbar'
+import Topbar from '../../components/Topbar';
+import axios from 'axios';
 
-export default function EditProfile() {
-  const [username, setUsername] = useState("")
+export default function EditProfilecc() {
+  const cookies = document.cookie.split(';')
+  const user1 = cookies[2];
+  const user2 = decodeURIComponent(user1).split('"');
+  console.log(user2[7])
   const [email, setEmail] = useState("")
-  const [ccnumber, setCcnumber] = useState("")
+  const [ccNumber, setCcnumber] = useState("")
   const [fName, setFname] = useState("")
   const [lName, setLname] = useState("")
-  console.log(JSON.stringify({username,email,ccnumber,fName,lName}))
-
-
+  
+  const HandleClick = async (e) => {
+    e.preventDefault();
+    const payload = {
+      username: user2[7],
+      email: email,
+      ccNumber: ccNumber,
+      fName: fName,
+      lName: lName
+    }
+    const res = await axios.post('http://localhost:8888/api/ccInfo', payload)
+    console.log(res.data)
+  }
   return (
     <div>
       <Topbar/>
         <div className="edit-cont">
-          <div className="box">
-            <label htmlFor="username-e">please enter your username </label><br/>
-            <input onChange={(e)=>setUsername(e.target.value)}id="username-e" type="text" className="username-edit" /><br/>
-            </div>
+          <form onSubmit={HandleClick}>
             <div className="box">
             <label htmlFor="email-e">please enter your email </label><br/>
             <input onChange={(e)=>setEmail(e.target.value)} id="email-e" type="text" className="email-edit" /><br/>
@@ -35,6 +46,7 @@ export default function EditProfile() {
             <input onChange={(e)=>setLname(e.target.value)} id="lName" type="text" className="lName" /><br/>
             </div>
             <button className="save-cc">Save my cc-info</button>
+            </form>
         </div>
     </div>
   )

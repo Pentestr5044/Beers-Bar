@@ -5,8 +5,8 @@ const cors = require("cors");
 
 route.use(cors());
 
-route.get('/profile', (req, res)=>{
-    createProfile.find({username: req.body.username},(err, pfData)=>{
+route.get('/profile/:username', (req, res)=>{
+    createProfile.find({username: req.params.username},(err, pfData)=>{
         res.status(200).json(pfData);
         if (err){
             res.status(500);

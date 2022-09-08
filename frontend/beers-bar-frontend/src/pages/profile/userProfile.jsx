@@ -6,7 +6,8 @@ import axios from 'axios';
 import {useState} from 'react';
 
 export default function UserProfile() {
-    const [response, setResponse] = useState({});
+    const [userinfo, setUserinfo] = useState('');
+    const [interests, setInterests] = useState('');
     const image = require('../../assets/tavern/chatroom.jpg')
     const cookies = document.cookie.split(';')
     const user1 = cookies[2];
@@ -21,11 +22,15 @@ export default function UserProfile() {
     admin: user6[39],
     creator: user6[43]
   }
-  const payload = {
-    username: user.username
-  };
-
-  console.log(response)
+  function QueryProfile(){
+      axios.get('http://localhost:8888/api/profile/'+user.username).then(res => {
+      setUserinfo(res.data[0].aboutMe)
+      setInterests(res.data[0].interests)
+    }).catch(err => {
+      console.log(err)
+    })
+  }
+  QueryProfile()
   return (
     <>
         <Topbar/>
@@ -39,8 +44,8 @@ export default function UserProfile() {
                     <img src={image} alt="" className="ppic" id="profilep"/>
                     <h1 className="uN">{user.username}</h1>
                     <h3 className="email">{user.email}</h3>
-                    <h3 className="userAddress">hello</h3>
-                    <h3 className="userdesc">hello
+                    <h3 className="userAddress">{userinfo}</h3>
+                    <h3 className="userdesc">{interests}
                     </h3>
                     <hr/>
                     <span className="img-feed">

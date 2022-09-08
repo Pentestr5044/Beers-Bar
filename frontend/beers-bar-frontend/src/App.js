@@ -12,7 +12,7 @@ import Login from "./pages/login/login";
 import Messages from "./pages/messages/meetingTable";
 import Profile from "./pages/profile/userProfile";
 import EditProfile from "./pages/profile/editProfile";
-import Createc from "./pages/profile/createCc";
+import EditProfilecc from "./pages/profile/createCc";
 import Register from "./pages/register/register";
 import Logout from './pages/login/logout';
 import EditInfo from './pages/profile/editInfo'
@@ -39,7 +39,7 @@ export default function App() {
         <Route path="/messages" element={<Messages />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/edit-profile" element={<EditProfile />} />
-        <Route path="/createc" element={<Createc />} />
+        <Route path="/createc" element={<EditProfilecc />} />
         <Route path="/registration" element={<Register />} />
         <Route path="/logout" element={<Logout />} />
       </Routes>
